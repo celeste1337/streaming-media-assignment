@@ -7,9 +7,21 @@ const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
 // start server, listen for traffic
 const onRequest = (request, response) => {
-  console.log(request.url);
+    console.log(request.url);
+
+    switch (request.url) {
+        case '/':
+            htmlHandler.getIndex(request, response);
+            break;
+        default:
+            htmlHandler.getIndex(request, response);
+            break;
+    }
 };
+
+
 
 http.createServer(onRequest).listen(port);
 
 console.log(`Listening on 127.0.0.1: ${port}`);
+
