@@ -1,6 +1,10 @@
 {
   "name": "streaming-media-assignment",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
   "description": "streaming media hw for igme 430",
   "main": "./src/server.js",
   "scripts": {
